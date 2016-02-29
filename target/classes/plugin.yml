@@ -1,0 +1,8 @@
+name: PrefixPlugin
+main: net.hilaryoi.plugin.prefixplugin.PrefixPlugin
+version: 0.1
+commands:
+  prefix:
+    description: Changes your prefix.
+    usage: /prefix <prefix> <color>
+    permission: prefix.prefix
