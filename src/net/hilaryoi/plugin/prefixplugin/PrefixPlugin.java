@@ -20,7 +20,7 @@ public class PrefixPlugin extends JavaPlugin implements Listener {
 
 	FileConfiguration config;
 
-	private int WAIT_DAYS, WAIT_MS;
+	final int WAIT_DAYS = 15, WAIT_MS = WAIT_DAYS * 86400000;;
 
 	@Override
 	public void onEnable() {
@@ -28,10 +28,6 @@ public class PrefixPlugin extends JavaPlugin implements Listener {
 		this.saveDefaultConfig();
 
 		config = this.getConfig();
-
-		WAIT_DAYS = config.getInt("cooldown");
-
-		WAIT_MS = WAIT_DAYS * 86400000;
 
 		getServer().getPluginManager().registerEvents(this, this);
 
