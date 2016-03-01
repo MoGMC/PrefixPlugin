@@ -20,7 +20,7 @@ public class PrefixChange extends UnsetPrefixChange {
 	public void runChange() {
 
 		Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(),
-				String.format("permissions player %s prefix %s ", Bukkit.getPlayer(uuid).getName(), prefix));
+				String.format("permissions player %s prefix \"%s \"", Bukkit.getPlayer(uuid).getName(), prefix));
 
 		plugin.setChangeDate(uuid);
 
